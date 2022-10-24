@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order</title>
+</head>
+<body>
+    <main>
+        <p>Your Information</p>
+        <form method="POST" action="http://blackgoosebistro.com/pizza.php">
+            Name: <input type="text" name="customername"> <br>
+            Address: <input type="text" name="address"> <br>
+            Telephone Number: <input type="text" name="telephone"> <br>
+            Email: <input type="text" name="email"> <br>
+            Delivery instruction: <br>
+            <input type="text" name="instructions" maxlength="400" placeholder="No more than 400 characters long">
+            <p><b>Design Your Dream Pizza:</b><br>Pizza Specs</p>
+            <fieldset>
+                <p>Crust (Choose one):</p>
+                <input type="radio" name="crust" id="classicwhite" value="Classic white"><label for="classicwhite">Classic white</label><br>
+                <input type="radio" name="crust" id="multigrain" value="Multigrain"><label for="multigrain">Multigrain</label><br>
+                <input type="radio" name="crust" id="cheesecrust" value="Cheese-stuffed crust"><label for="cheesecrust">Cheese-stuffed crust</label><br>
+                <input type="radio" name="crust" id="glutenf" value="Gluten-free"><label for="glutenf">Gluten-free</label>
+            </fieldset>
+            <fieldset>
+                <p>Toppings (choose as many as you want)</p>
+                <input type="checkbox" name="toppings[]" id="redsauce" value="Red sauce" checked><label for="redsauce">Red Sauce</label><br>
+                <input type="checkbox" name="toppings[]" id="whitesauce" value="White sauce"><label for="whitesauce">White sauce</label><br>
+                <input type="checkbox" name="toppings[]" id="mozzycheese" value="Mozzarella Cheese"><label for="mozzycheese">Mozzarella Cheese</label><br>
+                <input type="checkbox" name="toppings[]" id="pepperoni" value="Pepperoni"><label for="pepperoni">Pepperoni</label><br>
+                <input type="checkbox" name="toppings[]" id="mushrooms" value="Mushrooms"><label for="mushrooms">Mushrooms</label><br>
+                <input type="checkbox" name="toppings[]" id="peppers" value="Peppers"><label for="peppers">Peppers</label><br>
+                <input type="checkbox" name="toppings[]" id="anchovies" value="Anchovies"><label for="anchovies">Anchovies</label>
+            </fieldset>
+            <p>Number <br>How many pizzas: 
+                <select name="pizzas" size="1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+</body>
+</html>
