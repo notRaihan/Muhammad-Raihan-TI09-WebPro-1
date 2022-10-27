@@ -4,77 +4,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>cart</title>
 </head>
-<body>
-    <main>
-        <table>
-            <tr>
-                <th colspan="4" align="left"><h2>Your Cart</h2></th>
-                    <td rowspan="6">
-                        <table>
-                            <tr>
-                                <th>Summary (1 item)</th>
-                            </tr>
-                            <tr>
-                                <td>Subtotal</td>
-                                <td align="right">$20.00</td>
-                            </tr>
-                            <tr>
-                                <td>Shipping</td>
-                                <td align="right">-</td>
-                            </tr>
-                            <tr>
-                                <td>Est. Taxes</td>
-                                <td align="right">-</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2"><hr></td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td align="right"><b>$20.00</b></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" align="center"><button>Checkout</button></td>
-                            </tr>
-                        </table>
+<body style="font-family: monospace;">
+    <header style="display: flex; font-weight: bold;border: 1px solid black; background-color: silver;">
+        <!-- Site Name -->
+        <section style="width: 25%; margin: 0px 10px;">
+            <table style="text-align: right;">
+                <tr>
+                    <td>
+                        <span class="material-symbols-outlined">check_box_outline_blank</span>
                     </td>
-            </tr>
-            <tr>
+                    <td>
+                        <p>TokiPedia</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <!-- Navigasi Menu -->
+        <nav style="width: 50%;">
+            <table>
+                <tr>
+                    <td><a href="#"><p>Category 1</p></a></td>
+                    <td><p>| <a href="#">Category 2</a> |</p></td>
+                    <td><a href="#"><p>Category 3</p></a></td>
+                </tr>
+            </table>
+        </nav>
+        <!-- search box menu aside -->
+        <aside style="width: 25%;margin: 0px 0px 0px 1000px;">
+            <table>
+                <tr>
+                    <td><span class="material-symbols-outlined">search</span></td>
+                    <td><span class="material-symbols-outlined">shopping_cart</span></td>
+                    <td><p>Cart (1)</p></td>
+                </tr>
+            </table>
+        </aside>
+    </header>
+    <main style="display: flex;margin: 10px 5px;">
+        <!-- Your cart -->
+        <section style="width: 75%;">
+            <table style="width: 100%;">
+                <tr>
+                    <th colspan="4" align="left"><h2>Your Cart</h2></th>
+                </tr>
+                <tr>
+                    <tr>
+                        <td colspan="4"><hr></td>
+                    </tr>
+                    <td colspan="2">Item</td>
+                    <td>Price</td>
+                    <td align="center">Quantity</td>
+                </tr>
+                    <tr>
+                        <td colspan="4"><hr></td>
+                    </tr>
+                <tr>
+                    <td><img src="img/bluedevil.png" alt="Cat wears blue bandana" width="100px"></td>
+                    <td>T-Shirt<br>Size: Small</td>
+                    <td><b>$20.00</b></td>
+                    <td align="center">
+                        <select name="quantity" id="quantity">
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                        </select>
+                    </td>
+                </tr>
                 <tr>
                     <td colspan="4"><hr></td>
                 </tr>
-                <td colspan="2">Item</td>
-                <td>Price</td>
-                <td align="center">Quantity</td>
-            </tr>
                 <tr>
-                    <td colspan="4"><hr></td>
+                    <td colspan="3"></td>
+                    <td>Subtotal: <b>$20.00</b></td>
                 </tr>
-            <tr>
-                <td><img src="img/bluedevil.png" alt="Cat wears blue bandana" width="100px"></td>
-                <td>T-Shirt<br>Size: Small</td>
-                <td><b>$20.00</b></td>
-                <td align="center">
-                    <select name="quantity" id="quantity">
-                        <option value="one">1</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4"><hr></td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-                <td>Subtotal: <b>$20.00</b></td>
-            </tr>
-            <tr>
-                <td colspan="4"><hr></td>
-            </tr>
-        </table>
+            </table>
+        </section>
+        <!-- Summary -->
+        <aside style="width: 25%;background-color: silver;padding: 50px 10px;">
+            <table style="width: 100%;">
+                <tr>
+                    <th align="left">Summary (1 item)</th>
+                </tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td align="right">$20.00</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td align="right">-</td>
+                </tr>
+                <tr>
+                    <td>Est. Taxes</td>
+                    <td align="right">-</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td align="right"><b>$20.00</b></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button style="width: 100%;" onclick="document.location='checkout_0110222259_raihan.html'">Checkout</button></td>
+                </tr>
+            </table>
+        </aside>
     </main>
+    <footer style="display: flex; font-weight: bold;border: 1px solid black;">
+        <!-- Site Name -->
+        <section style="width: 25%; margin: 0px 10px;">
+            <table>
+                <tr>
+                    <td colspan="3">
+                        Tokipedia
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="material-symbols-outlined">credit_card</span></td>
+                    <td><span class="material-symbols-outlined">local_atm</span></td>
+                    <td><span class="material-symbols-outlined">savings</span></td>
+                </tr>
+            </table>
+        </section>
+        <!-- Navigasi Menu -->
+        <nav style="width: 50%;">
+            <table>
+                <tr>
+                    <td><a href="#"><p>Category X</p></a></td>
+                    <td><p>| <a href="#">Category Y</a> |</p></td>
+                    <td><a href="#"><p>Category Z</p></a></td>
+                </tr>
+            </table>
+        </nav>
+        <!-- newsletter -->
+        <aside style="width: 25%;margin: 0px 0px 0px 500px;">
+            <table>
+                <tr>
+                    <td colspan="2">Stay In Touch! Join our Newsletter.</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="#" id="#" placeholder="Enter Email" style="width: 100%;"></td>
+                    <td><button style="width: 100%;">Subscribe</button></td>
+                </tr>
+            </table>
+        </aside>
+    </footer>
 </body>
 </html>
