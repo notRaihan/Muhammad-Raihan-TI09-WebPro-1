@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Barang</title>
+</head>
+<body style="background-color: silver;">
+    <header style="margin: 20px; padding: 10px 15px;border: 1px solid black;background-color: white;">
+        <table align="center" style="width: 70%; text-align: center;">
+            <tr>
+                <td><a href="" style="text-decoration: none;">Home</a></td>
+                <td> | </td>
+                <td><a href="" style="text-decoration: none;">Generate Link</a></td>
+                <td> | </td>
+                <td><a href="" style="text-decoration: none;">Transaction History</a></td>
+                <td> | </td>
+                <td><a href="" style="text-decoration: none;">Policy</a></td>
+                <td> | </td>
+                <td><a href="" style="text-decoration: none;">Logout</a></td>
+            </tr>
+        </table>
+    </header>
+    <main style="display:flex; margin: 20px;">
+        <!-- Baju image -->
+        <section style="width: 25%;">
+            <img src="img/baju.jpg" alt="baju lupabapak" style="width: 100%; margin: 10px 0px;">
+            <br>
+            <button style="width: 45%;">Upload Picture</button>
+        </section>
+        <!-- form table -->
+        <section style="width: 75%; margin: 5px 20px;">
+            <table style="width: 100%;">
+                <tr>
+                    <td>Title Here  : </td>
+                    <td><input type="text" placeholder="Product" style="width: 80%;"></td>
+                </tr>
+                <tr>
+                    <td>Description       : </td>
+                    <td><textarea name="#" id="#" cols="25" rows="5" maxlength="50" style="resize:none;width: 80%;" placeholder="Year : 2009&#10;&#10;Model :&#10;&#10;Size : XXL"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Account Number : </td>
+                    <td><input type="text" placeholder="123-456-789-0" style="width: 80%;"></td>
+                </tr>
+                <tr>
+                    <td>Bank : </td>
+                    <td>
+                        <select name="quantity" id="quantity">
+                            <option value="one">VISA</option>
+                            <option value="two">Master</option>
+                            <option value="three">US Bank</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Account Holder : </td>
+                    <td><input type="text" placeholder="Name Here" style="width: 80%;"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="font-size: small;">* if the transaction is for 3 person, choose 3 from the drop-down list</td>
+                </tr>
+                <tr style="color: darkgreen;">
+                    <td></td>
+                    <td><input type="checkbox" name="mphone" id="mphone" checked><label for="mphone">Send to Mobile Phone</label></td>
+                </tr>
+                <tr style="color: darkgreen;">
+                    <td></td>
+                    <td><input type="checkbox" name="email" id="email" checked><label for="email">Send to Email</label></td>
+                </tr>
+                <tr>
+                    <td>Send to Mobile Phone : </td>
+                    <td><input type="number" placeholder="123567890" style="width: 80%;"></td>
+                </tr>
+                <tr>
+                    <td>Send to Email : </td>
+                    <td><input type="email" placeholder="youremail@gmail.com" style="width: 80%;"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button style="width: 15%;" onclick="document.location='result-order-barang.html'">Generate Nabr Link</button></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
