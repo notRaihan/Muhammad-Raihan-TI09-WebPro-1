@@ -1,0 +1,99 @@
+body {
+    background-color: rgb(132, 131, 131);
+    font-family: 'Courier New', Courier, monospace;
+}
+#header {
+    background-color: rgb(88, 96, 88);
+    text-align: center;
+    padding: 10px;
+    color: black;
+    margin: 30px 50px;
+    border: 2px solid black;
+}
+#header h1 {
+    color: white;
+}
+h2 {
+    color: white;
+    text-align: left;
+}
+.gambar {
+    text-align: center;
+    background-color: rgb(88, 96, 88);
+    padding: 1.5% 1%;
+    margin: 0% 22.5%;
+    border: 2px solid black;
+}
+.gambar img {
+    border: 1px solid black;
+}
+#header blockquote{
+    background-color: white;
+    border: 1px solid black;
+    padding: 1.5% 1%;
+}
+.menu ul {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+}
+.menu ul li {
+    background-color: rgb(88, 96, 88);
+    padding: 1%;
+    border: 1px solid black;
+}
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+.isi, #profil, #beternak, .promo {
+    font-size: 20px;
+    text-align: justify;
+    background-color: rgb(88, 96, 88);
+    color: white;
+    margin: 3% 1%;
+    padding: 0.5% 2%;
+    border: 2px solid black;
+}
+#soekarno, .jawa {
+    font-weight: bold;
+}
+#profil li {
+    margin: 2.5% 0%;
+}
+#beternak li {
+    padding: 0.5%;
+}
+.fp::first-letter {
+    font-size: 50px;
+}
+.koleksi {
+    text-align: center;
+    padding: 2%;
+    background-color: rgb(88, 96, 88);
+    margin: 1% 5%;
+    border: 2px solid black;
+}
+.koleksi img {
+    width: 20%;
+    border: 1px solid black;
+}
+.promo li a {
+    color: white;
+}
+.promo ol li a:hover,.menu a:hover {
+    color: violet ;
+}
+#Wa {
+    color: yellow;
+    font-weight: bold;
+}
+.promo h3 {
+    font-weight: lighter;
+}
+#harga {
+    color: red;
+    font-weight: bold;
+}
