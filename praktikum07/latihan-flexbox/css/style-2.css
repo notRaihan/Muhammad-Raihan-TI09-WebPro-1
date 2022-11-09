@@ -1,0 +1,9 @@
+.koleksi img {
+    width: 200px;
+}
+.koleksi {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+} 
