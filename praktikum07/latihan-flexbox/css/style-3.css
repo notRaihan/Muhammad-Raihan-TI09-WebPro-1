@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+}
+.outer-col-1 {
+    background-color: yellowgreen;
+    flex: 1;
+}
+.outer-col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+}
+.inner-row {
+    display: flex;
+    /* flex-direction: row;  default*/
+}
+.inner-col {
+    flex: 4;
+}
+.inner-row article {
+    min-height: 60vh; 
+    /* extending the container article */
+    background-color: skyblue;
+}
+.inner-row aside {
+    background: aquamarine;
+    flex: 1;
+}
+header {
+    background-color: darkorange;
+    height: 20vh;
+}
+footer {
+    background-color: violet;
+    height: 20vh;
+}
+header,
+footer,
+article,
+nav,
+aside {
+    padding: 1em;
+    margin: 3px;
+}
