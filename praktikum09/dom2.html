@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Latihan Javascript 2</title>
+    </head>
+    <body>
+        <p>Kurs rupiah to dollar saat ini, around : Rp.15700.</p>
+        <h2>Dollar -> Rupiah</h2>
+        <form>
+            Dolar : <input type="number" id="dollar" /> <br /><br />
+            <!-- Kurs Rupiah : <input type="number" id="kurs" /> <br /><br /> -->
+            <input
+                type="button"
+                value="Hitung"
+                id="hitung"
+                onclick="calcDollar()"
+            />
+            <br /><br />
+            Hasil : <input type="text" id="hasil" disabled />
+        </form>
+
+        <h2>Rupiah -> Dollar</h2>
+        <form>
+            Rupiah : <input type="number" id="rupiah" /> <br /><br />
+            <input
+                type="button"
+                value="Hitung"
+                id="hitung"
+                onclick="calcRupiah()"
+            />
+            <br /><br />
+            Hasil : <input type="text" id="hasil2" disabled />
+        </form>
+
+        <script>
+            const kursIdrToUsd = 15700;
+
+            function calcDollar() {
+                const dollar = document.getElementById("dollar").value;
+                // const kurs = document.getElementById("kurs").value;
+
+                const convert = dollar * kursIdrToUsd;
+                document.getElementById("hasil").value = "Rp. " + convert;
+            }
+
+            function calcRupiah() {
+                const rupiah = document.getElementById("rupiah").value;
+                const convert = rupiah * (1 / kursIdrToUsd);
+
+                document.getElementById("hasil2").value =
+                    "$ " + convert.toFixed(2);
+            }
+        </script>
+    </body>
+</html>
