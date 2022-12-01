@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    /* margin: 24px; */
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+nav, aside {
+    flex: 0 0 20vw
+}
+
+header, footer {
+    height: 20vh;
+}
+
+
+header {
+    background-color: darkcyan;
+}
+article {
+    background-color: darkorange;
+    /* flex-grow: 1; */
+    order: 1;
+}
+aside {
+    background-color: darkorchid;
+    order: 2;
+}
+nav {
+    background-color: darkred;
+    order: 3;
+}
+footer {
+    background-color: darkmagenta;
+}
