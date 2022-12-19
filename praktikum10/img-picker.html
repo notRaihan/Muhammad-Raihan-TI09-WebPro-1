@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        select {
+            width: 20%;
+        }
+        img {
+            max-width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <select  id="img-select">
+        <option value="none" hidden>Please Select.</option>
+        <option value="elang">Elang</option>
+        <option value="gorila">Gorila</option>
+        <option value="singa">Singa</option>
+    </select>
+    <div id="img-box"></div>
+
+    <script>
+        const imgSelector = document.getElementById('img-select');
+        const parent = document.getElementById('img-box');
+
+        document.querySelectorAll('#img-select').forEach((option) => {
+            option.addEventListener('change', () => {
+                addImage(option.value);
+            })
+        })
+        
+        function addImage(value) {
+            const img = document.createElement('img');
+            const imgQuery = parent.querySelector('img');
+
+            if (imgQuery) {
+                imgQuery.remove();
+            }
+
+            switch (value){
+                case 'elang':
+                    img.setAttribute('src', 'img/elang.jpg');
+                    break;
+                case 'gorila':
+                    img.setAttribute('src', 'img/gorila.jpg');
+                    break;
+                case 'singa':
+                    img.setAttribute('src', 'img/singa.jpg');
+                    break;
+            }
+            parent.appendChild(img);
+        }
+
+    </script>
+</body>
+</html>
