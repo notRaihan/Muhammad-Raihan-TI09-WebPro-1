@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kurs Rupiah</title>
+    </head>
+    <body>
+        <form style="background-color: #dfdfdf; width: 50%">
+            <fieldset>
+                <legend>Kurs Rupiah - Mata Uang Asing</legend>
+                <table>
+                    <thead>
+                        <th>Masukan Nilai</th>
+                        <th>Valas</th>
+                        <th>Nilai Rupiah</th>
+                    </thead>
+                    <tbody>
+                        <td>
+                            <input type="number" id="uang" />
+                        </td>
+                        <td>
+                            <select id="pilihan">
+                                <option hidden>--Pilih--</option>
+                                <option value="usd">Dolar US</option>
+                                <option value="sd">Dolar Singapore</option>
+                                <option value="rm">Ringgit Malaysia</option>
+                                <option value="yen">Yen Jepang</option>
+                                <option value="eu">Euro</option>
+                                <option value="riyal">Riyal Arab Saudi</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" id="konversi" />
+                        </td>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+
+        <script>
+            let pilihan = document.getElementById("pilihan");
+
+            pilihan.onchange = function () {
+                let result = document.getElementById("konversi");
+                let inpUang = document.getElementById("uang").value;
+                if (pilihan.value == "usd") {
+                    result.value = inpUang * 9915;
+                } else if (pilihan.value == "sd") {
+                    result.value = inpUang * 13472;
+                } else if (pilihan.value == "rm") {
+                    result.value = inpUang * 874;
+                } else if (pilihan.value == "yen") {
+                    result.value = inpUang * 120;
+                } else if (pilihan.value == "eu") {
+                    result.value = inpUang * 15888;
+                } else if (pilihan.value == "riyal") {
+                    result.value = inpUang * 3592;
+                } else if (inpUang) {
+                    result.value = "input money!";
+                }
+            };
+        </script>
+    </body>
+</html>
