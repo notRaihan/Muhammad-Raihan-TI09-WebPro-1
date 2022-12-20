@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+</head>
+<body>
+    <form id="formValidation">
+        <label for="namaPelanggan">Nama Pelanggan:</label><br>
+        <input type="text" id="namaPelanggan" name="namaPelanggan" maxlength="30"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="jamKeberangkatan">Jam Keberangkatan:</label><br>
+        <input type="time" id="jamKeberangkatan" name="jamKeberangkatan"><br>
+        <label for="tujuanKeberangkatan">Tujuan Keberangkatan:</label><br>
+        <input type="text" id="tujuanKeberangkatan" name="tujuanKeberangkatan"><br>
+        <label for="jumlahTiket">Jumlah Tiket:</label><br>
+        <input type="number" id="jumlahTiket" name="jumlahTiket" min="1" max="10"><br><br>
+        <input type="submit" value="Submit">
+    </form> 
+    
+    <script>
+        const form = document.getElementById('formValidation');
+        form.addEventListener('submit', (event) => {
+        event.preventDefault();
+    
+        const namaPelanggan = form.namaPelanggan.value;
+        const email = form.email.value;
+        const jamKeberangkatan = form.jamKeberangkatan.value;
+        const tujuanKeberangkatan = form.tujuanKeberangkatan.value;
+        const jumlahTiket = form.jumlahTiket.value;
+    
+        // Validasi nama pelanggan
+        if (!namaPelanggan) {
+            const errorMessage = document.createElement('div');
+            errorMessage.innerHTML = 'Nama pelanggan harus diisi';
+            errorMessage.style.color = 'red';
+
+            const checkErr = form.namaPelanggan.parentNode.querySelector('div');
+            if (!checkErr) {
+            form.namaPelanggan.parentNode.insertBefore(errorMessage, form.namaPelanggan.nextSibling);
+            form.namaPelanggan.focus();
+            setTimeout(() => {
+                errorMessage.remove();
+            }, 2500);
+            }
+            return;
+        }
+    
+        // Validasi email
+        if (!email) {
+            const errorMessage = document.createElement('div');
+            errorMessage.innerHTML = 'Email harus diisi';
+            errorMessage.style.color = 'red';
+
+            const checkErr = form.email.parentNode.querySelector('div');
+            if (!checkErr) {
+            form.email.parentNode.insertBefore(errorMessage, form.email.nextSibling);
+            form.email.focus();
+            setTimeout(() => {
+                errorMessage.remove();
+            }, 2500);
+            }
+            return;
+        }
+    
+        // Validasi jam keberangkatan
+        if (!jamKeberangkatan) {
+            const errorMessage = document.createElement('div');
+            errorMessage.innerHTML = 'Jam keberangkatan harus diisi';
+            errorMessage.style.color = 'red';
+
+            const checkErr = form.jamKeberangkatan.parentNode.querySelector('div');
+            if (!checkErr) {
+            form.jamKeberangkatan.parentNode.insertBefore(errorMessage, form.jamKeberangkatan.nextSibling);
+            form.jamKeberangkatan.focus();
+            setTimeout(() => {
+                errorMessage.remove();
+            }, 2500);
+            }
+            return;
+        }
+    
+        // Validasi tujuan keberangkatan
+        if (!tujuanKeberangkatan) {
+            const errorMessage = document.createElement('div');
+            errorMessage.innerHTML = 'Tujuan keberangkatan harus diisi';
+            errorMessage.style.color = 'red';
+
+            const checkErr = form.tujuanKeberangkatan.parentNode.querySelector('div');
+            if (!checkErr) {
+            form.tujuanKeberangkatan.parentNode.insertBefore(errorMessage, form.tujuanKeberangkatan.nextSibling);
+            form.tujuanKeberangkatan.focus();
+            setTimeout(() => {
+                errorMessage.remove();
+            }, 2500);
+            }
+
+            return;
+        }
+    
+        // Validasi jumlah tiket
+        if (!jumlahTiket || jumlahTiket < 1 || jumlahTiket > 10) {
+            const errorMessage = document.createElement('div');
+            errorMessage.innerHTML = 'Jumlah tiket harus diisi dengan bilangan bulat antara 1-10';
+            errorMessage.style.color = 'red';
+
+            const checkErr = form.jumlahTiket.parentNode.querySelector('div');
+            if (!checkErr) {
+            form.jumlahTiket.parentNode.insertBefore(errorMessage, form.jumlahTiket.nextSibling);
+            form.jumlahTiket.focus();
+            setTimeout(() => {
+                errorMessage.remove();
+            }, 2500);
+            }
+
+            return;
+        }
+    
+        // Tampilkan data yang telah diinput oleh pengguna
+        const formData = `
+            Nama Pelanggan: ${namaPelanggan}
+            Email: ${email}
+            Jam Keberangkatan: ${jamKeberangkatan}
+            Tujuan Keberangkatan: ${tujuanKeberangkatan}
+            Jumlah Tiket: ${jumlahTiket}
+        `;
+    
+        document.body.innerHTML += `<pre>${formData}</pre>`;
+    
+        // Tampilkan pesan sukses
+        alert('Data berhasil dikirim');
+        });
+    </script>
+</body>
+</html>
